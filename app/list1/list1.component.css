@@ -1,0 +1,14 @@
+h2{
+    width: 300px;
+    text-align: center;
+    margin: 20px auto;
+    color: yellow;
+    font-size: 35px;
+}
+
+ul {
+    margin: 0 auto;
+    width: 300px;
+    color: #330aae;
+    font-size: 18px;
+}
