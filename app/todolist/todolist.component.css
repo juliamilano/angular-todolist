@@ -19,7 +19,14 @@ h2{
     color: grey;
     position: relative;
 }
+.todo-item.completed .title {
+    text-decoration: line-through;
+}
 
+.todo-item.completed .title,
+.todo-item.completed .material-icons {
+    color: lightgray;
+}
 button {
     background: 0 0;
     border: none;
