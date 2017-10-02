@@ -4,8 +4,10 @@ import { Component } from "@angular/core";
 // Данное свойство необходимо устанавливать в случае если в проекте используется загрузчик systemJS
 
 class Todo {
-    title: string;
-    completed: boolean;
+    constructor(public title: string,
+                public completed: boolean = false){
+
+    }
 }
 
 const todos: Todo[] = [
@@ -31,6 +33,13 @@ const todos: Todo[] = [
 export class TodosComponent  {
     title = `Изучить Angular 2`;
     todos: Todo[] = todos;
+
+    create(event: Event, title:string){
+        event.preventDefault();
+
+        let todo: Todo = new Todo(title);
+        this.todos.push(todo);
+    }
 
     toggles(todo: Todo){
         console.log("toggle");

@@ -1,5 +1,8 @@
 <h2>ToDo List</h2>
-
+<form action="" class="todo-form" (submit)="create($event, titleInput.value)">
+    <input type="text" placeholder="Что нужно сделать" #titleInput>
+    <button type="submit">Добавить</button>
+</form>
 <section class="todo-list" *ngIf="todos.length > 0">
     <div class="todo-item" *ngFor="let todo of todos" [class.completed]="todo.completed">
         <button class="checkbox icon" (click)="toggles(todo)">
