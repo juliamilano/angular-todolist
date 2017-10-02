@@ -3,7 +3,12 @@ import { Component } from "@angular/core";
 // Для использования относительных путей, необходимо добавить свойство moduleId и установить значение для свойства module.id
 // Данное свойство необходимо устанавливать в случае если в проекте используется загрузчик systemJS
 
-const todos = [
+class Todo {
+    title: string;
+    completed: boolean;
+}
+
+const todos: Todo[] = [
     {
         title: "Изучить JS",
         completed: true
@@ -25,11 +30,15 @@ const todos = [
 })
 export class TodosComponent  {
     title = `Изучить Angular 2`;
-    todos = todos;
-    toggle(todo: any){
-        todo.comleted = !todo.completed;
+    todos: Todo[] = todos;
+
+    toggles(todo: Todo){
+        console.log("toggle");
+        console.log(todo.completed);
+        todo.completed = !todo.completed;
     };
-    delete(todo: any){
+    delete(todo: Todo){
+
         let index = this.todos.indexOf(todo);
         if(index>-1){
             this.todos.splice(index,1);

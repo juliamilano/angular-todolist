@@ -2,7 +2,7 @@
 
 <section class="todo-list" *ngIf="todos.length > 0">
     <div class="todo-item" *ngFor="let todo of todos" [class.completed]="todo.completed">
-        <button class="checkbox icon" (click)="toggle(todo)">
+        <button class="checkbox icon" (click)="toggles(todo)">
             <i class="material-icons">{{todo.completed ? 'check_box' : 'check_box_outline_blank'}}</i>
         </button>
 
@@ -13,8 +13,5 @@
                 <i class="material-icons">delete</i>
             </button>
         </div>
-
     </div>
-
-
 </section>

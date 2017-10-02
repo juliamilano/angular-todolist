@@ -2,6 +2,8 @@
  * Created by pc on 22.09.2017.
  */
 import { Component } from "@angular/core";
+import { enableProdMode } from "@angular/core";
+enableProdMode();
 
 @Component({
     moduleId: module.id,
